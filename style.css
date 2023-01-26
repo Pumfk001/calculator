@@ -1,0 +1,94 @@
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    font-family: "Nunito Sans", sans-serif;
+    text-align: center;
+    background-color: rgb(112, 200, 206);
+    min-width: 740px;
+    height:100%;
+}
+
+
+/* MAIN CONTENT */
+
+.mainContainer {
+    display: flex;
+    margin: 2% auto 0;
+}
+
+.calculator {
+    width: 100%;
+    max-width:350px;
+    /* border: 1px solid black; */
+    border-radius: 5px;
+    background-color: rgb(248, 108, 132);
+    margin: auto;
+    justify-content: center;
+}
+
+.display{
+    display:flex;
+    justify-content: right;
+    align-items: center;
+    padding: 2%;
+    margin: 4% auto;
+    height: 60px;
+    width: 92%;
+    border-radius: 5px;
+    background-color:white;
+    text-align: center;
+    font-size: 30px;
+}
+
+/* BUTTONS */
+
+.solarPanel{
+    display:grid;
+    border-radius: 5px;;
+    grid-column: span 2;
+    grid-template-columns: repeat(5, 1fr);
+    background-color: rgb(93, 93, 158);
+    height: 40px;
+    margin-top:10px;
+}
+
+.solarGrid{
+    border-right: 1px dashed grey;
+    }
+
+.buttonContainer{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap:8px;
+    margin: 4%;
+}
+
+.clear{
+    grid-column: span 2;
+}
+
+button{
+    background-color: rgb(253, 231, 234);
+    border: none;
+    border-radius: 5px;;
+    height:60px;
+    font-size: 18px;;
+}
+
+
+
+
+
+
