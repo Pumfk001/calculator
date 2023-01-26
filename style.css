@@ -15,7 +15,7 @@ html{
 body{
     font-family: 'Roboto Mono', sans-serif;
     text-align: center;
-    background-color: rgb(112, 200, 206);
+    background-color: rgb(118, 185, 185);
     min-width: 740px;
     height:100%;
 }
@@ -33,7 +33,7 @@ body{
     max-width:400px;
     border: 2px solid grey;
     border-radius: 5px;
-    background-color: rgb(248, 108, 132);
+    background-color: rgb(229, 115, 134);
     margin: 5vh auto 0;
     justify-content: center;
 }
@@ -60,7 +60,7 @@ body{
     border-radius: 5px;;
     grid-column: span 2;
     grid-template-columns: repeat(5, 1fr);
-    background-color: rgb(93, 93, 158);
+    background-color: rgb(100, 100, 158);
     height: 48px;
     margin-top:12px;
     border: 2px solid grey;

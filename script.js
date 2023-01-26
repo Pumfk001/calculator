@@ -28,7 +28,6 @@ numberInput.forEach(item => {
 operatorInput.forEach(item => {
     item.addEventListener('click', event => {
         if(operatorType!=='') calcAns(); 
-        console.log(tempNum);
         operatorType = item.textContent;
         changeDisplay(operatorType);
     })
@@ -45,6 +44,7 @@ function clearAll(){
 
 function calcAns(){
     tempNum = operate(operatorType, firstNum, tempNum);
+    operatorType = '';
     changeDisplay(tempNum);
 }
 
@@ -85,5 +85,3 @@ function operate (x, a, b){
     }
 
 };
-
-// ERROR AFTER CALCULATION AFTER EQUALS NOT WORKING CORRECTLY
