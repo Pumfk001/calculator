@@ -31,3 +31,39 @@ function operate (x, a, b){
     }
 
 };
+
+const numberInput = document.querySelectorAll('.numberInput');
+const operatorInput = document.querySelectorAll('.operatorInput');
+const displayValue = document.querySelector('.display');
+let firstNum = ''
+let secondNum = ''
+
+//use inputs from button clicks
+numberInput.forEach(item => {
+    item.addEventListener('click', event => {
+
+    // console.log(displayValue.textContent);
+    let buttonVal = item.textContent;
+
+    
+    // if(displayValue.textContent==='x'){
+    //     secondNum += buttonVal;
+    //     changeDisplay(secondNum);
+    // };
+        firstNum += buttonVal;
+        changeDisplay(firstNum);
+    })
+});
+
+operatorInput.forEach(item => {
+    item.addEventListener('click', event => {
+        let operatorType = item.textContent;
+        changeDisplay(operatorType);
+    })
+});  
+
+
+
+function changeDisplay(input){
+    displayValue.textContent = input;
+};
