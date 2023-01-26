@@ -34,7 +34,6 @@ operatorInput.forEach(item => {
 });  
 
 function clearAll(){
-    answer = 'undefined'
     firstNum = '';
     secondNum = '';
     tempNum = '';
@@ -43,12 +42,15 @@ function clearAll(){
 }
 
 function calcAns(){
+    if(operatorType==='') {changeDisplay(tempNum); return;};
+    // if(tempNum==='Undefined') {changeDisplay(0); return;};
     tempNum = operate(operatorType, firstNum, tempNum);
     operatorType = '';
     changeDisplay(tempNum);
 }
 
 function changeDisplay(input){
+    if(input==='Undefined') input = 0;
     displayVal.textContent = input;
 };
 

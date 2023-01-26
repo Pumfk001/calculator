@@ -15,7 +15,7 @@ html{
 body{
     font-family: 'Roboto Mono', sans-serif;
     text-align: center;
-    background-color: rgb(118, 185, 185);
+    background-color: rgb(108, 168, 168);
     min-width: 740px;
     height:100%;
 }
@@ -33,7 +33,7 @@ body{
     max-width:400px;
     border: 2px solid grey;
     border-radius: 5px;
-    background-color: rgb(229, 115, 134);
+    background-color: rgb(216, 110, 127);
     margin: 5vh auto 0;
     justify-content: center;
 }
@@ -60,7 +60,7 @@ body{
     border-radius: 5px;;
     grid-column: span 2;
     grid-template-columns: repeat(5, 1fr);
-    background-color: rgb(100, 100, 158);
+    background-color: rgb(106, 106, 160);
     height: 48px;
     margin-top:12px;
     border: 2px solid grey;
@@ -87,15 +87,32 @@ body{
 }
 
 button{
-    background-color: rgb(253, 231, 234);
+    background-color: rgb(246, 213, 217);
     border-radius: 5px;;
     height:72px;
     font-size: 18px;
     border: 2px solid grey;
     font-family: inherit;
+    transition-duration: 0.15s;
+    
 }
 
+.numberInput:hover, .operatorInput:hover{
+    background-color:  rgb(248, 187, 196);
+}
 
+.clear:hover{
+    background-color: rgb(171, 196, 196);
+}
+
+.equals:hover{
+    background-color:rgb(210, 193, 238) ;
+    
+}
+
+.numberInput:active, .operatorInput:active, .equals:active, .clear:active {
+   border-width: 4px;
+} 
 
 
 
