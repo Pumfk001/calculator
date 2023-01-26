@@ -13,7 +13,7 @@ html{
 }
 
 body{
-    font-family: "Nunito Sans", sans-serif;
+    font-family: 'Roboto Mono', sans-serif;
     text-align: center;
     background-color: rgb(112, 200, 206);
     min-width: 740px;
@@ -25,16 +25,16 @@ body{
 
 .mainContainer {
     display: flex;
-    margin: 2% auto 0;
+    flex-direction: column;
 }
 
 .calculator {
     width: 100%;
-    max-width:350px;
-    /* border: 1px solid black; */
+    max-width:400px;
+    border: 2px solid grey;
     border-radius: 5px;
     background-color: rgb(248, 108, 132);
-    margin: auto;
+    margin: 5vh auto 0;
     justify-content: center;
 }
 
@@ -44,12 +44,13 @@ body{
     align-items: center;
     padding: 2%;
     margin: 4% auto;
-    height: 60px;
+    height: 72px;
     width: 92%;
     border-radius: 5px;
     background-color:white;
     text-align: center;
     font-size: 30px;
+    border: 2px solid grey;
 }
 
 /* BUTTONS */
@@ -60,8 +61,9 @@ body{
     grid-column: span 2;
     grid-template-columns: repeat(5, 1fr);
     background-color: rgb(93, 93, 158);
-    height: 40px;
-    margin-top:10px;
+    height: 48px;
+    margin-top:12px;
+    border: 2px solid grey;
 }
 
 .solarGrid{
@@ -76,16 +78,25 @@ body{
 }
 
 .clear{
+    background-color: rgb(224, 226, 226);
+}
+
+.equals{
+    background-color:rgb(232, 221, 250) ;
     grid-column: span 2;
 }
 
 button{
     background-color: rgb(253, 231, 234);
-    border: none;
     border-radius: 5px;;
-    height:60px;
-    font-size: 18px;;
+    height:72px;
+    font-size: 18px;
+    border: 2px solid grey;
+    font-family: inherit;
 }
+
+
+
 
 
 

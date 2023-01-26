@@ -24,9 +24,9 @@ function operate (x, a, b){
             return add(a, b);
         case '-': 
            return subtract(a, b);
-        case '*': 
+        case 'x': 
            return multiply(a, b);
-        case '/': 
+        case '÷': 
             return divide(a, b);
     }
 
