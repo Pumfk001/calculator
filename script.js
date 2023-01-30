@@ -12,11 +12,11 @@ let operatorType = '';
 
 displayVal.textContent = '0';
 
-//use inputs from button clicks
+//saves the number input values and displays them
 numberInput.forEach(item => {
     item.addEventListener('click', event => {
         let buttonVal = item.textContent;
-        if(displayVal.textContent==='÷' || displayVal.textContent==='x' || displayVal.textContent==='-' || displayVal.textContent==='+'){
+            if(displayVal.textContent==='÷' || displayVal.textContent==='x' || displayVal.textContent==='-' || displayVal.textContent==='+'){
             firstNum = tempNum;
             tempNum = '';
         };
@@ -25,14 +25,16 @@ numberInput.forEach(item => {
     })
 });
 
+//saves the operator input and displays it
 operatorInput.forEach(item => {
     item.addEventListener('click', event => {
-        if(operatorType!=='') calcAns(); 
+        if(operatorType!=='') calcAns(); //if there has been a previous calculation input without using =, calculate that first
         operatorType = item.textContent;
         changeDisplay(operatorType);
     })
 });  
 
+// clears the calculator by resetting all variables and displaying 0
 function clearAll(){
     firstNum = '';
     secondNum = '';
@@ -41,21 +43,28 @@ function clearAll(){
     changeDisplay(0);
 }
 
+// calculate the answer using inputted numbers and operator
 function calcAns(){
-    if(operatorType==='') {changeDisplay(tempNum); return;};
-    // if(tempNum==='Undefined') {changeDisplay(0); return;};
+    if(operatorType==='') {changeDisplay(tempNum); return;}; //returns same number if user enters number then =
     tempNum = operate(operatorType, firstNum, tempNum);
     operatorType = '';
     changeDisplay(tempNum);
 }
 
+// update display
 function changeDisplay(input){
     if(input==='Undefined') input = 0;
     displayVal.textContent = input;
 };
 
+function addPoint(){
+    if(displayVal.textContent.includes('.')) return;
+    tempNum += '.';
+    changeDisplay(tempNum);
+}
 
-//create basic functions to call
+
+//basic maths functions to call
 
 function add (a, b){
     return parseFloat(a) + parseFloat(b);
@@ -73,6 +82,7 @@ function divide (a, b){
     return a / b;
 };
 
+// call relevant function based on user operator input
 function operate (x, a, b){
 
     switch(x){
