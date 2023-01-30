@@ -57,6 +57,7 @@ function changeDisplay(input){
     displayVal.textContent = input;
 };
 
+//add decimal point on button press, if there isn't one already
 function addPoint(){
     if(displayVal.textContent.includes('.')) return;
     tempNum += '.';

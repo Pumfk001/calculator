@@ -32,7 +32,7 @@ body{
     width: 100%;
     max-width:400px;
     border: 2px solid grey;
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: rgb(216, 110, 127);
     margin: 5vh auto 0;
     justify-content: center;
@@ -42,11 +42,13 @@ body{
     display:flex;
     justify-content: right;
     align-items: center;
+    word-wrap: break-word;
+    word-break: break-all;
     padding: 2%;
     margin: 4% auto;
-    height: 72px;
+    min-height: 72px;
     width: 92%;
-    border-radius: 5px;
+    border-radius: 10px;
     background-color:white;
     text-align: center;
     font-size: 30px;
@@ -57,7 +59,7 @@ body{
 
 .solarPanel{
     display:grid;
-    border-radius: 5px;;
+    border-radius: 10px;;
     grid-column: span 2;
     grid-template-columns: repeat(5, 1fr);
     background-color: rgb(106, 106, 160);
@@ -88,7 +90,7 @@ body{
 
 button{
     background-color: rgb(246, 213, 217);
-    border-radius: 5px;;
+    border-radius: 10px;;
     height:72px;
     font-size: 18px;
     border: 2px solid grey;
